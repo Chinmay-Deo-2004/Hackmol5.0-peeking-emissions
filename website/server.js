@@ -7,7 +7,7 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-mongoose.connect("mongodb://localhost:27017/data")
+mongoose.connect("mongodb+srv://nitjec22:nitj22ec@cluster0.3w273ju.mongodb.net/data")
 
 app.get('/getUsers', (req, res) => {
     UserModel.find()
