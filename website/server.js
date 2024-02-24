@@ -18,3 +18,6 @@ app.get('/getUsers', (req, res) => {
 app.listen(5005, () => {
     console.log("Server is running")
 })
+
+var fetchRouter = require('./nodeapp/routes/routes');
+app.use('/', fetchRouter);
