@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "CO2",
+    "version": "0.0.1",
+    "description": "This extension will calculate the CO2 footprints created by you",
+    "action": {
+      "default_icon": "templates/sprout.png",
+      "default_popup": "popup.html"
+    },
+    "icons": {
+      "16": "templates/sprout.png",
+      "48": "templates/sprout.png",
+      "128": "templates/sprout.png"
+    },
+    "permissions": ["webNavigation","tabs"]
+  }
