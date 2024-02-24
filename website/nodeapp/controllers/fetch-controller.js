@@ -8,3 +8,14 @@ module.exports={
       })
     }
 }
+
+module.exports={
+  fetchData:function(callback){
+     var userData=userTable.find({});
+     userData.exec(function(err, data){
+         if(err) throw err;
+         return callback(data);
+     })
+     
+  }
+}
