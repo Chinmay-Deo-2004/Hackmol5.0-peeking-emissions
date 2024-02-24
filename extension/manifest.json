@@ -5,12 +5,22 @@
     "description": "This extension will calculate the CO2 footprints created by you",
     "action": {
       "default_icon": "templates/sprout.png",
-      "default_popup": "popup.html"
+      "default_popup": "popup.html",
+        "default_title": "Action Button"
     },
     "icons": {
       "16": "templates/sprout.png",
       "48": "templates/sprout.png",
       "128": "templates/sprout.png"
     },
-    "permissions": ["webNavigation","tabs"]
+    "permissions": ["webNavigation","tabs", "activeTab", "scripting"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content-script.js"]
+      }
+    ]
   }
