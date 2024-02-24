@@ -13,7 +13,7 @@
       "48": "templates/sprout.png",
       "128": "templates/sprout.png"
     },
-    "permissions": ["webNavigation","tabs", "activeTab", "scripting"],
+    "permissions": ["webNavigation","tabs", "activeTab", "scripting", "storage"],
     "background": {
         "service_worker": "background.js"
     },

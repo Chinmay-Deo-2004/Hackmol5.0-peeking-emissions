@@ -1,6 +1,5 @@
 const mongoose=require('mongoose');
 
-
 // create an schema
 const userSchema = new mongoose.Schema({
             domain: String,
