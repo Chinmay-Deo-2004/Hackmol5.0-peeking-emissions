@@ -1,18 +1,44 @@
-table, td, th {  
-    border: 1px solid #ddd;
-    text-align: left;
+body{
+  background: rgb(132,247,68);
+  background: radial-gradient(circle, 
+  rgba(132,247,68,0.8155637254901961) 0%,
+  rgba(9,121,61,0.6362920168067228) 49%,
+  rgba(0,255,145,0.8631827731092436) 100%);
+  border: 3px solid #000000;
+  border: 10px;
+  display: grid;
+  grid-template-columns: 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh;
+  grid-template-rows: 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh;
+}
+.up{
+  margin-top: 5vh;
+  font-size: 10vh;
+  font-weight: bold;
+  grid-row: 1/2;
+  grid-column: 7/20;
+}
+table, td, th, tr {  
+    border: 4px solid #ddd;
+    text-align: center;
   }
-  
+.table{
+  margin-top: 5vh;
+  grid-row-start: 3;
+  grid-column-start: 7;
+}
 table {
-    border-collapse: collapse;
-    width: 50%;
-   
-  }
-.table-data{
-    position: relative;
-    left:50px;
-    top:50px;
+    width:80vb!important;
+    border-collapse: collapse;  
   }
 th, td {
     padding: 15px;
   }
+  .tree1{
+    grid-row-start: 1;
+  grid-column-start: 1;
+  }
+  .tree2 {
+    transform: scalex(-1);
+    grid-row-start: 1;
+  grid-column-start: 20;
+}
