@@ -1,4 +1,9 @@
 var totalDataConsumed = 0;
+var currentURL = window.location.href;
+var green = false;
+
+
+console.log('currentURL:', currentURL);
 console.log('content-script.js loaded');
 
 function calculateDataConsumed() {
@@ -13,17 +18,8 @@ function calculateDataConsumed() {
       });
   
       // Convert bytes to MBs for easier understanding
-      var totalDataConsumedMB = totalDataConsumed / 1024 / 1024;
-      chrome.runtime.sendMessage({type: "setData", data: totalDataConsumedMB});
-
-      //send fetch request to the server
-      fetch('http://localhost:8080/sendData', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ domain: window.location.hostname, footprint: totalDataConsumedMB, green: false }),
-      })
+      var totalDataConsumedMB = (totalDataConsumed / 1024 / 1024)*11/1024;
+      chrome.runtime.sendMessage({type: "setData", data: totalDataConsumedMB, domain: currentURL, green: green});
   
       // Log the total data consumed by the page
       console.log('Total data consumed by the web page (MB):', totalDataConsumedMB);
