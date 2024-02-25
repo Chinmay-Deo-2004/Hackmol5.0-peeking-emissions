@@ -9,7 +9,7 @@ fetch("http://localhost:5005/getdata", {
         const column = Object.keys(data.data[0]);
         const head = document.querySelector('thead');
         let tags = "<tr>";
-        for( i = 1; i < column.length; i++){
+        for( i = 1; i < column.length-1; i++){
             tags += `<th>${column[i]}</th>`;
         }
         tags += "</tr"

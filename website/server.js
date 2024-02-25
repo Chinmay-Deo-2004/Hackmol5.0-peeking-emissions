@@ -15,7 +15,7 @@ app.get('/getUsers', (req, res) => {
     .catch(err => res.json)
 })
 
-app.listen(5006, () => {
+app.listen(5005, () => {
     console.log("Server is running")
 })
 
